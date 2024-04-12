@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap");
+
+:root {
+  --color-text-default: #2f3134;
+  --color-splitter: #EBEDEF;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 500;
+  --font-size-large: 5.2rem;
+  --font-size-medium: 2rem;
+  --font-size-small: 1.6rem;
+}
+
+* {
+  color: var(--color-text-default);
+  box-sizing: border-box;
+  font-family: "Encode Sans", sans-serif;
+  font-size: 62.5%; /* Browser default: 10px */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6; /* Recommended pattern*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: antiquewhite; /* FIX: Apagar propriedade */
+}
+
+/* NOTE: Orientação de estilos
+-------------------------------------------------
+  Breaking-news -> h2 ✓
+  headlines -> h3² ✓
+  highlight-news -> img (192x112), h4 ✓, h3¹ ✓, p ✓
+  today-news -> h4 ✓, h3¹ ✓, p ✓
+  sports news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
+  Globo news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
+-------------------------------------------------
+  ¹ -> font-wight: var(--font-weight-bold);
+  ² -> font-wight: var(--font-weight-semibold);
+  * -> Existem notícias sem "p"
+-------------------------------------------------
+*/
+
+h2 {
+  color: #c4160c;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  line-height: 6.8rem; /* TODO: verificar consistência */
+}
+
+h3 {
+  font-size: var(--font-size-medium);
+  /* TODO: Verificar variações do peso da fonte -> font-weight: ;  */
+}
+
+h4 {
+  /* TODO: Verificar variações de cor -> color: ;  */
+  font-size: var(--font-size-small);
+}
+
+hr { 
+  border-width: 1px 0 0 0;
+  border-color: #F5F6F740;
+}
+
+.vertical-splitter {
+  height: 100%;
+  border-right: 1px solid var(--color-splitter);
+}
+
+.horizontal-splitter {
+  width: 100%;
+  border-top: 1px solid var(--color-splitter);
+}
+
+img {
+  border-radius: 1.2rem;
+}
+
+.img-size-regular {
+  height: 12.8rem;
+  width: 24rem;
+}
+
+.img-size-small {
+  height: 11.2rem;
+  width: 19.2rem;
+}
+
+p {
+  font-size: var(--font-size-small);
+}
+
+.headlines > h3 {
+  color: #303134;
+  font-weight: var(--font-weight-semibold);
+}
+
+.highlight-news > h3,
+.today-news > h3 {
+  font-weight: var(--font-weight-bold);
+}
+
+.highlight-news > h4,
+.today-news > h4 {
+  color: #c4170c;
+}
+
+.sports-news > h4 {
+  color: #16ae54;
+}
+
+.globo-news > h4 {
+  color: #ec8006;
+}
