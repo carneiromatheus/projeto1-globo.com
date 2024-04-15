@@ -1,67 +1,114 @@
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap");
-
 :root {
   --color-text-default: #2f3134;
-  --color-splitter: #EBEDEF;
+  --color-splitter: #ebedef;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --font-weight-semibold: 500;
   --font-size-large: 5.2rem;
   --font-size-medium: 2rem;
   --font-size-small: 1.6rem;
+  --height-header: 13rem;
+  --width-page: 128rem;
+  --page-padding: 0 1.6rem;
 }
 
-* {
-  color: var(--color-text-default);
+html {
   box-sizing: border-box;
+  color: var(--color-text-default);
   font-family: "Encode Sans", sans-serif;
-  font-size: 62.5%; /* Browser default: 10px */
+  font-size: 62.5%;
   font-weight: var(--font-weight-regular);
-  line-height: 1.6; /* Recommended pattern*/
+  line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
-body {
-  height: 100vh;
-  background-color: antiquewhite; /* FIX: Apagar propriedade */
+.flex {
+  display: flex;
 }
 
-/* NOTE: Orientação de estilos
--------------------------------------------------
-  Breaking-news -> h2 ✓
-  headlines -> h3² ✓
-  highlight-news -> img (192x112), h4 ✓, h3¹ ✓, p ✓
-  today-news -> h4 ✓, h3¹ ✓, p ✓
-  sports news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
-  Globo news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
--------------------------------------------------
-  ¹ -> font-wight: var(--font-weight-bold);
-  ² -> font-wight: var(--font-weight-semibold);
-  * -> Existem notícias sem "p"
--------------------------------------------------
-*/
+.column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.gap-8 {
+  gap: 0.8rem;
+}
+
+.gap-16 {
+  gap: 1.6rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
 
 h2 {
   color: #c4160c;
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
-  line-height: 6.8rem; /* TODO: verificar consistência */
+  line-height: 6.8rem;
+  color: #efefef; /* FIX: Apagar */
+  background-color: #efefef; /* FIX: Apagar */
 }
 
 h3 {
   font-size: var(--font-size-medium);
-  /* TODO: Verificar variações do peso da fonte -> font-weight: ;  */
+  color: #efefef; /* FIX: Apagar */
+  background-color: #efefef; /* FIX: Apagar */
+}
+
+.highlight-news > h3,
+.today-news > h3 {
+  font-weight: var(--font-weight-bold);
 }
 
 h4 {
-  /* TODO: Verificar variações de cor -> color: ;  */
   font-size: var(--font-size-small);
+  color: #efefef; /* FIX: Apagar */
+  background-color: #efefef; /* FIX: Apagar */
 }
 
-hr { 
+/* FIX: des-comentar */
+/* .highlight-news > h4,
+.today-news > h4 {
+  color: #c4170c;
+} */
+
+/* FIX: des-comentar */
+/* .sports-news > h4 {
+  color: #16ae54;
+} */
+
+/* FIX: des-comentar */
+/* .globo-news > h4 {
+  color: #ec8006;
+} */
+
+p {
+  font-size: var(--font-size-small);
+  color: #efefef; /* FIX: Apagar */
+  background-color: #efefef; /* FIX: Apagar */
+}
+
+hr {
+  width: 100%;
   border-width: 1px 0 0 0;
-  border-color: #F5F6F740;
+  border-color: #f5f6f740;
 }
 
 .vertical-splitter {
@@ -79,38 +126,98 @@ img {
 }
 
 .img-size-regular {
+  background-color: #bfbfbf; /* FIX: Apagar propriedade */
+  opacity: 0.3; /* FIX: Apagar propriedade */
   height: 12.8rem;
   width: 24rem;
+  object-fit: contain;
 }
 
 .img-size-small {
+  background-color: #bfbfbf; /* FIX: Apagar propriedade */
+  opacity: 0.3; /* FIX: Apagar propriedade */
   height: 11.2rem;
   width: 19.2rem;
+  object-fit: contain;
 }
 
-p {
-  font-size: var(--font-size-small);
+/* NOTE: Orientação de estilos
+-------------------------------------------------
+  -> Breaking-news -> h2 ✓
+  -> headlines -> h3² ✓
+  -> highlight-news -> img (192x112), h4 ✓, h3¹ ✓, p ✓
+  -> today-news -> h4 ✓, h3¹ ✓, p ✓
+  sports news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
+  Globo news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
+-------------------------------------------------
+  ¹ -> font-wight: var(--font-weight-bold);
+  ² -> font-wight: var(--font-weight-semibold);
+  * -> Existem notícias sem "p"
+-------------------------------------------------
+*/
+
+header {
+  background-color: #fff;
+  height: var(--height-header);
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
-.headlines > h3 {
-  color: #303134;
+.logo {
+  background-color: #efefef; /* FIX: Apagar propriedade */
+  height: 3.6rem;
+  width: 17.2rem;
+  margin-block: 2rem;
+}
+
+.globo-product-container {
+  height: 4.8rem;
+  width: var(--width-page);
+  padding: var(--page-padding);
+}
+
+.globo-product-menu {
+  width: 100%;
+  list-style: none;
+}
+
+.globo-product {
+  background-color: #efefef; /* FIX: Apagar propriedade */
+  height: 4rem;
+  width: 11.6rem;
+}
+
+main {
+  width: var(--width-page);
+  margin-top: var(--height-header);
+  padding: var(--page-padding);
+  padding-block: 1.6rem;
+}
+
+.container-news {
+  width: 100%;
+}
+
+.breaking-news {
+  height: 20rem;
+  margin-bottom: 1.6rem;
+}
+
+.headlines-news {
+  /* color: #303134; */ /* FIX: des-comentar */
   font-weight: var(--font-weight-semibold);
+  height: 2.4rem;
+  width: 100%;
 }
 
-.highlight-news > h3,
-.today-news > h3 {
-  font-weight: var(--font-weight-bold);
+.highlight-news,
+.today-news {
+  height: 50%;
+  width: 100%;
 }
 
-.highlight-news > h4,
-.today-news > h4 {
-  color: #c4170c;
-}
-
-.sports-news > h4 {
-  color: #16ae54;
-}
-
-.globo-news > h4 {
-  color: #ec8006;
+.column-news {
+  height: 100%;
+  width: 24rem;
 }
