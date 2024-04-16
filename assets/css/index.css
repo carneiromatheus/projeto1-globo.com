@@ -5,8 +5,8 @@
   --font-weight-semibold: 500;
   --font-weight-regular: 400;
   --font-size-large: 5.2rem;
-  --font-size-medium: 2rem;
-  --font-size-small: 1.6rem;
+  --font-size-medium: 1.6rem;
+  --font-size-small: 1.2rem;
   --height-header: 13rem;
   --width-page: 128rem;
   --page-padding: 0 2.4rem;
@@ -49,6 +49,14 @@ html {
   gap: 1.6rem;
 }
 
+.gap-24 {
+  gap: 2.4rem;
+}
+
+.gap-32 {
+  gap: 3.2rem;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -77,16 +85,16 @@ h4 {
   font-size: var(--font-size-small);
 }
 
-.highlight-news > h4,
-.today-news > h4 {
+.highlight-news h4,
+.today-news h4 {
   color: #c4170c;
 }
 
-.sports-news > h4 {
+.sports-news h4 {
   color: #16ae54;
 }
 
-.globo-news > h4 {
+.globo-news h4 {
   color: #ec8006;
 }
 
@@ -116,16 +124,12 @@ img {
 }
 
 .img-size-regular {
-  background-color: #bfbfbf; /* FIX: Apagar propriedade */
-  opacity: 0.3; /* FIX: Apagar propriedade */
   height: 12.8rem;
   width: 24rem;
   object-fit: contain;
 }
 
 .img-size-small {
-  background-color: #bfbfbf; /* FIX: Apagar propriedade */
-  opacity: 0.3; /* FIX: Apagar propriedade */
   height: 11.2rem;
   width: 19.2rem;
   object-fit: contain;
@@ -140,11 +144,17 @@ header {
   z-index: 1;
 }
 
-.logo {
-  background-color: #efefef; /* FIX: Apagar propriedade */
+.logo-desktop {
   height: 3.6rem;
   width: 17.2rem;
-  margin-block: 2rem;
+  margin: 2rem;
+}
+
+.logo-mobile {
+  height: 5.8rem;
+  width: 20.8rem;
+  margin: 2rem;
+  display: none;
 }
 
 .globo-product-container {
@@ -159,9 +169,10 @@ header {
 }
 
 .globo-product {
-  background-color: #efefef; /* FIX: Apagar propriedade */
   height: 4rem;
-  width: 11.6rem;
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
 }
 
 main {
@@ -200,16 +211,40 @@ main {
 }
 
 @media (max-width: 1280px) {
-  .desktop {
+  .desktop,
+  .logo-desktop {
     display: none;
   }
 
-  .mobile {
-    display: initial;
+  .mobile,
+  .logo-mobile {
+    display: inline;
   }
 
   .mobile-width-full {
     width: 100%;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    line-height: 1.6;
+  }
+
+  .headlines-news,
+  .highlight-news,
+  .today-news {
+    font-size: 2rem;
+    color: #cd150b;
+  }
+
+  .sports-news {
+    font-size: 2rem;
+    color: #06AA48;
+  }
+  
+  .globo-news {
+    font-size: 2rem;
+    color: #FF8203;
   }
 
   .mobile-flex-column {
