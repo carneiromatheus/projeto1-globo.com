@@ -62,14 +62,10 @@ h2 {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
   line-height: 6.8rem;
-  color: #efefef; /* FIX: Apagar */
-  background-color: #efefef; /* FIX: Apagar */
 }
 
 h3 {
   font-size: var(--font-size-medium);
-  color: #efefef; /* FIX: Apagar */
-  background-color: #efefef; /* FIX: Apagar */
 }
 
 .highlight-news > h3,
@@ -79,30 +75,23 @@ h3 {
 
 h4 {
   font-size: var(--font-size-small);
-  color: #efefef; /* FIX: Apagar */
-  background-color: #efefef; /* FIX: Apagar */
 }
 
-/* FIX: des-comentar */
-/* .highlight-news > h4,
+.highlight-news > h4,
 .today-news > h4 {
   color: #c4170c;
-} */
+}
 
-/* FIX: des-comentar */
-/* .sports-news > h4 {
+.sports-news > h4 {
   color: #16ae54;
-} */
+}
 
-/* FIX: des-comentar */
-/* .globo-news > h4 {
+.globo-news > h4 {
   color: #ec8006;
-} */
+}
 
 p {
   font-size: var(--font-size-small);
-  color: #efefef; /* FIX: Apagar */
-  background-color: #efefef; /* FIX: Apagar */
 }
 
 hr {
@@ -141,21 +130,6 @@ img {
   width: 19.2rem;
   object-fit: contain;
 }
-
-/* NOTE: Orientação de estilos
--------------------------------------------------
-  -> Breaking-news -> h2 ✓
-  -> headlines -> h3² ✓
-  -> highlight-news -> img (192x112), h4 ✓, h3¹ ✓, p ✓
-  -> today-news -> h4 ✓, h3¹ ✓, p ✓
-  sports news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
-  Globo news -> img (240x128) ✓, h4 ✓, h3¹ ✓, p* ✓
--------------------------------------------------
-  ¹ -> font-wight: var(--font-weight-bold);
-  ² -> font-wight: var(--font-weight-semibold);
-  * -> Existem notícias sem "p"
--------------------------------------------------
-*/
 
 header {
   background-color: #fff;
@@ -207,7 +181,7 @@ main {
 }
 
 .headlines-news {
-  /* color: #303134; */ /* FIX: des-comentar */
+  color: #303134;
   font-weight: var(--font-weight-semibold);
   width: 100%;
 }
