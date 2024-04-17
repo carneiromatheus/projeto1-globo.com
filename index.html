@@ -3,14 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Globo.com | By carneiromatheus</title>
-    <link rel="icon" href="./assets/images/logo/favicon.ico" type="image/png" />
     <meta name="author" content="Matheus Carneiro" />
     <meta
       name="keywords"
@@ -18,216 +10,31 @@
     />
     <meta
       name="description"
-      content="Confira esta versão simplificada da página inicial da Globo.com compatível com desktop e mobile, utilizando HTML5 e CSS3."
+      content="Confira esta versão simplificada e responsiva da página inicial da Globo.com."
+    />
+    <title>Globo.com | By carneiromatheus</title>
+    <link rel="icon" href="./assets/images/logo/favicon.ico" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
-  <body class="flex column align-center">
-    <header class="flex column align-center">
+  <body>
+    <header>
       <img
         class="logo-desktop"
         src="./assets/images/logo/desktop.svg"
-        alt="logo da versão desktop"
+        alt="Logo Globo.com"
       />
-      <img
-        class="logo-mobile"
-        src="./assets/images/logo/mobile.svg"
-        alt="logo da versão mobile"
-      />
-      <hr />
-      <nav class="globo-product-container flex align-center mobile-width-full">
-        <ul class="globo-product-menu flex justify-between">
-          <li class="globo-product" style="color: #c3170c">g1</li>
-          <li class="globo-product desktop" style="color: #1e4b9b">o globo</li>
-          <li class="globo-product desktop" style="color: #006766">valor</li>
-          <li class="globo-product" style="color: #07aa47">ge</li>
-          <li class="globo-product desktop" style="color: #e3662b">cartola</li>
-          <li class="globo-product desktop" style="color: #fb0735">
-            globoplay
-          </li>
-          <li class="globo-product desktop" style="color: #ff75bb">dropz</li>
-          <li class="globo-product" style="color: #ec7d00">gshow</li>
-          <li class="globo-product desktop" style="color: #323333">quem</li>
-          <li class="globo-product desktop" style="color: #a81d83">receitas</li>
-          <li class="globo-product mobile" style="color: #666666">tech</li>
-          <li class="globo-product mobile" style="color: #0769de">vídeos</li>
-        </ul>
-      </nav>
-      <hr />
+      <nav>Menu</nav>
     </header>
-    <main
-      class="flex gap-16 justify-between mobile-flex-column mobile-width-full"
-    >
-      <section class="container-news flex column gap-16">
-        <h2 class="breaking-news">
-          Vacinados entrarão nos EUA sem quarentena a partir de 8 de novembro
-        </h2>
-        <h3 class="headlines-news">
-          Ministros ‘lavam as mãos’ sobre Bolsonaro não se vacinar, relata blog
-        </h3>
-        <h3 class="headlines-news desktop">
-          Bandeiras em frente ao Congresso lembram 600 mil brasileiros mortos
-        </h3>
-        <span class="horizontal-splitter"></span>
-        <div class="flex gap-24 mobile-flex-column">
-          <article class="highlight-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small mobile-img-size"
-                src="./assets/images/news/alem-do-presidente.jpeg"
-                alt="Bolsonaro e seus filhos parlamentares"
-              />
-              <h4 class="desktop">Além do presidente</h4>
-              <h3>CPI deve pedir indiciamento de filhos de Bolsonaro</h3>
-            </div>
-            <p>A evangélicos, Bolsonaro diz ‘chorar sozinho em casa</p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="highlight-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small mobile-img-size"
-                src="./assets/images/news/crimes-na-fronteira.jpeg"
-                alt="Homem e suas duas mulheres"
-              />
-              <h4 class="desktop">Crimes na fronteira</h4>
-              <h3>Triângulo amoroso vira chave em linha de investigação</h3>
-            </div>
-            <p>1ª de 7 mortes entre Brasil e Paraguai faz 1 semana</p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="highlight-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small mobile-img-size"
-                src="./assets/images/news/reino-unido.jpeg"
-                alt="parlamentar antes da morte"
-              />
-              <h4 class="desktop">Reino Unido</h4>
-              <h3>Parlamentar inglês é esfaqueado e morto em igreja</h3>
-            </div>
-            <p>Homem de 25 anos foi preso no local, diz polícia</p>
-          </article>
-        </div>
-        <span class="horizontal-splitter"></span>
-        <div class="flex gap-16 mobile-flex-column">
-          <article class="today-news flex column gap-8">
-            <h4 class="desktop">Sabatina de Mendonça</h4>
-            <h3>PGR é consultada sobre investigação contra Alcolumbre</h3>
-            <p>Aliados dizem que situação de Alcolumbre ‘está feia’</p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="today-news flex column gap-8">
-            <h4 class="desktop">Negócio de R$ 5,2 bi</h4>
-            <h3>Pão de Açúcar vende 71 pontos do Extra para o Assaí</h3>
-            <p>Lembre fusões e aquisições bilionárias recentes no país</p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="today-news flex column gap-8">
-            <h4 class="desktop">Elo com caminhoneiros</h4>
-            <h3>Podcast: ministro liga empresários a atos de 7/9; ouça</h3>
-            <p>Neto de Jango critica veto de Bolsonaro a tributo</p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-        </div>
-      </section>
-      <section
-        class="container-news flex gap-16 justify-between mobile-flex-column"
-      >
-        <span class="vertical-splitter desktop"></span>
-        <div class="column-news flex column gap-32 mobile-width-full">
-          <article class="sports-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small mobile-img-size"
-                src="./assets/images/news/espiao-estatistico.jpeg"
-                alt="técnico do Palmeiras"
-              />
-              <h4 class="desktop">Espião estatístico</h4>
-              <h3>
-                Classificação do returno tem Palmeiras em último; veja as
-                posições
-              </h3>
-            </div>
-            <p>Crespo almoça com diretoria e deve se despedir no CT</p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="sports-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small mobile-img-size"
-                src="./assets/images/news/greve-segue-na-raposa.jpeg"
-                alt="presidente do cruzeiro"
-              />
-              <h4 class="desktop">Greve segue na Raposa</h4>
-              <h3>Cruzeiro não viabiliza recurso para quitar atrasados</h3>
-            </div>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="sports-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small desktop"
-                src="./assets/images/news/campeonato-frances.jpeg"
-                alt="jogador francês"
-              />
-              <h4 class="desktop">Campeonato francês</h4>
-              <h3>Desfalcado, PSG recebe o Angers, 4º colocado</h3>
-            </div>
-            <p class="mobile">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit
-            </p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-        </div>
-        <span class="vertical-splitter desktop"></span>
-        <div class="column-news flex column gap-32 mobile-width-full">
-          <article class="globo-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small mobile-img-size"
-                src="./assets/images/news/ferias-e-jh.jpeg"
-                alt="apresentador da globo"
-              />
-              <h4 class="desktop">Férias e JH</h4>
-              <h3>César Tralli se emociona na despedida do SP1</h3>
-            </div>
-            <p class="mobile">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit
-            </p>
-            <p class="mobile">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit
-            </p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="globo-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small desktop"
-                src="./assets/images/news/verdades-secretas-2.jpeg"
-                alt="cena de verdades secretas 2"
-              />
-              <h4 class="desktop">Verdades Secretas 2</h4>
-              <h3>Angel cruza a passarela poderosa; reveja desfiles</h3>
-            </div>
-            <p>Blanche terá dois relacionamentos</p>
-            <p>Gabriel viverá sadomasoquista</p>
-          </article>
-          <span class="horizontal-splitter mobile"></span>
-          <article class="globo-news flex column gap-8">
-            <div class="flex column gap-8 mobile-flex-row">
-              <img
-                class="img-size-small mobile-img-size"
-                src="./assets/images/news/nos-tempos-do-imperador.jpeg"
-                alt="cena da novela"
-              />
-              <h4 class="desktop">Nos Tempos do Imperador</h4>
-              <h3>Lota vai cair em golpe</h3>
-            </div>
-            <p class="desktop">Teresa toma decisão radical</p>
-          </article>
-        </div>
-      </section>
+    <main>
+      <section class="main-news">Main News</section>
+      <section class="sport-news">Sport News</section>
+      <section class="globo-news">Globo News</section>
     </main>
   </body>
 </html>

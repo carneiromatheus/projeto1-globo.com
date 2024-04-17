@@ -1,264 +1,76 @@
-:root {
-  --color-text-default: #2f3134;
-  --color-splitter: #ebedef;
-  --font-weight-bold: 700;
-  --font-weight-semibold: 500;
-  --font-weight-regular: 400;
-  --font-size-large: 5.2rem;
-  --font-size-medium: 1.6rem;
-  --font-size-small: 1.2rem;
-  --height-header: 13rem;
-  --width-page: 128rem;
-  --page-padding: 0 2.4rem;
-}
-
-html {
-  box-sizing: border-box;
-  color: var(--color-text-default);
-  font-family: "Encode Sans", sans-serif;
-  font-size: 62.5%;
-  font-weight: var(--font-weight-regular);
-  line-height: 1.6;
-}
-
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.flex {
+:root {
+  --margin-default: 0.8rem;
+  --height-header: 12rem;
+  --height-main: calc(
+    100dvh - var(--height-header) - (4 * var(--margin-default))
+  );
+}
+
+html {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  font-size: 1.6rem;
   display: flex;
-}
-
-.column {
-  flex-direction: column;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.gap-8 {
-  gap: 0.8rem;
-}
-
-.gap-16 {
-  gap: 1.6rem;
-}
-
-.gap-24 {
-  gap: 2.4rem;
-}
-
-.gap-32 {
-  gap: 3.2rem;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-h2 {
-  color: #c4160c;
-  font-size: var(--font-size-large);
-  font-weight: var(--font-weight-bold);
-  line-height: 6.8rem;
-}
-
-h3 {
-  font-size: var(--font-size-medium);
-}
-
-.highlight-news > h3,
-.today-news > h3 {
-  font-weight: var(--font-weight-bold);
-}
-
-h4 {
-  font-size: var(--font-size-small);
-}
-
-.highlight-news h4,
-.today-news h4 {
-  color: #c4170c;
-}
-
-.sports-news h4 {
-  color: #16ae54;
-}
-
-.globo-news h4 {
-  color: #ec8006;
-}
-
-p {
-  font-size: var(--font-size-small);
-}
-
-hr {
-  width: 100%;
-  border-width: 1px 0 0 0;
-  border-color: #f5f6f740;
-}
-
-.vertical-splitter {
-  height: 100%;
-  border-right: 1px solid var(--color-splitter);
-}
-
-.horizontal-splitter {
-  width: 100%;
-  border-top: 1px solid var(--color-splitter);
-  margin-bottom: 1.6rem;
-}
-
-img {
-  border-radius: 1.2rem;
-}
-
-.img-size-regular {
-  height: 12.8rem;
-  width: 24rem;
-  object-fit: contain;
-}
-
-.img-size-small {
-  height: 11.2rem;
-  width: 19.2rem;
-  object-fit: contain;
+  flex-wrap: wrap;
 }
 
 header {
-  background-color: #fff;
-  height: var(--height-header);
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1;
+  height: var(--height-header);
+  margin: var(--margin-default);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logo-desktop {
-  height: 3.6rem;
-  width: 17.2rem;
-  margin: 2rem;
+  margin-block: 2rem;
 }
 
-.logo-mobile {
-  height: 5.8rem;
-  width: 20.8rem;
-  margin: 2rem;
-  display: none;
-}
-
-.globo-product-container {
-  height: 4.8rem;
-  width: var(--width-page);
-  padding: var(--page-padding);
-}
-
-.globo-product-menu {
+nav {
   width: 100%;
-  list-style: none;
-}
-
-.globo-product {
-  height: 4rem;
-  font-size: 2rem;
-  font-weight: var(--font-weight-bold);
-  text-align: center;
+  height: 4.4rem;
+  padding-inline: 12rem;
+  display: flex;
+  border-block: 1px solid #000;
+  background-color: #efefef;
 }
 
 main {
-  width: var(--width-page);
-  margin-top: var(--height-header);
-  padding: var(--page-padding);
-  padding-block: 1.6rem;
-}
-
-.container-news {
   width: 100%;
+  min-height: var(--height-main);
+  margin: var(--margin-default);
+  padding-inline: 12rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
-.breaking-news {
-  width: 100%;
-  margin-bottom: 1.6rem;
+.main-news,
+.sport-news,
+.globo-news {
+  height: 100%;
+  display: flex;
+  background-color: #efefef;
 }
 
-.headlines-news {
-  color: #303134;
-  font-weight: var(--font-weight-semibold);
-  width: 100%;
+.main-news {
+  flex: 2 0 60rem;
 }
 
-.highlight-news,
-.today-news {
-  width: 100%;
-}
-
-.column-news {
-  width: 24rem;
-}
-
-.mobile {
-  display: none;
-}
-
-@media (max-width: 1280px) {
-  .desktop,
-  .logo-desktop {
-    display: none;
-  }
-
-  .mobile,
-  .logo-mobile {
-    display: inline;
-  }
-
-  .mobile-width-full {
-    width: 100%;
-  }
-
-  h2 {
-    font-size: 3.2rem;
-    line-height: 1.6;
-  }
-
-  .headlines-news,
-  .highlight-news,
-  .today-news {
-    font-size: 2rem;
-    color: #cd150b;
-  }
-
-  .sports-news {
-    font-size: 2rem;
-    color: #06AA48;
-  }
-  
-  .globo-news {
-    font-size: 2rem;
-    color: #FF8203;
-  }
-
-  .mobile-flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mobile-flex-row {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .mobile-img-size {
-    height: 6.8rem;
-    width: 12rem;
-  }
+.sport-news,
+.globo-news {
+  flex: 1 0 30rem;
 }
