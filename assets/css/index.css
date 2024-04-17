@@ -35,10 +35,12 @@ header {
 }
 
 .logo-desktop {
+  display: inline;
   margin-block: 2rem;
 }
 
 .logo-mobile {
+  display: none;
   margin-block: 1.2rem;
 }
 
@@ -89,6 +91,16 @@ main {
   .main-news {
     min-width: 100%;
     min-height: calc(var(--height-main) - 100px);
+  }
+}
+
+@media only screen and (max-width: 643px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: inline;
   }
 }
 
