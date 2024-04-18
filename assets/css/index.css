@@ -7,6 +7,9 @@
 }
 
 :root {
+  --font-bold: 700;
+  --font-semibold: 500;
+  --font-regular: 400;
   --margin-default: 0.8rem;
   --height-header: 12rem;
   --height-main: calc(
@@ -21,21 +24,25 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 2rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 header {
   width: 100%;
-  margin: var(--margin-default);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
 }
 
 .logo-desktop {
-  display: inline;
   margin-block: 2rem;
 }
 
@@ -48,14 +55,36 @@ nav {
   width: 100%;
   height: 4.4rem;
   display: flex;
-  border-block: 1px solid #000;
-  background-color: #efefef;
+  justify-content: center;
+  padding-inline: var(--margin-default);
+  border-block: 1px solid #f5f6f7;
+}
+
+a {
+  font-weight: var(--font-bold);
+  text-decoration: none;
+}
+
+.menu-desktop,
+.menu-mobile {
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: var(--margin-default);
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-mobile {
+  display: none;
 }
 
 main {
   width: 100%;
-  min-height: var(--height-main);
-  margin: var(--margin-default);
+  max-width: 1280px;
+  margin: calc(var(--height-header) + var(--margin-default))
+    var(--margin-default) var(--margin-default);
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -64,8 +93,8 @@ main {
 .main-news,
 .sport-news,
 .globo-news {
-  min-height: var(--height-main);
   display: flex;
+  padding: var(--margin-default);
   background-color: #efefef;
 }
 
@@ -80,33 +109,19 @@ main {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 1503px) {
-  nav,
-  main {
-    padding-inline: 10%;
+@media only screen and (max-width: 767px) {
+  .logo-mobile,
+  .menu-mobile {
+    display: flex;
   }
-}
 
-@media only screen and (max-width: 1261px) {
-  .main-news {
-    min-width: 100%;
-    min-height: calc(var(--height-main) - 100px);
-  }
-}
-
-@media only screen and (max-width: 643px) {
-  .logo-desktop {
+  .logo-desktop,
+  .menu-desktop {
     display: none;
   }
 
-  .logo-mobile {
-    display: inline;
-  }
-}
-
-@media only screen and (max-width: 310px) {
-  .sport-news,
-  .globo-news {
-    min-width: 100%;
+  .main-news {
+    min-width: none;
+    width: 100%;
   }
 }
