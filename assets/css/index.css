@@ -23,18 +23,23 @@ html {
   line-height: 1.6;
 }
 
-body {
-  font-size: 2rem;
+body,
+header,
+main {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+header,
+nav,
+.menu-desktop,
+.menu-mobile,
+main {
+  width: 100%;
 }
 
 header {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,70 +51,76 @@ header {
   margin-block: 2rem;
 }
 
-.logo-mobile {
+.logo-mobile,
+.menu-mobile {
   display: none;
+}
+
+.logo-mobile {
   margin-block: 1.2rem;
 }
 
-nav {
-  width: 100%;
-  height: 4.4rem;
+nav,
+.menu-desktop,
+.main-news,
+.sport-news,
+.globo-news {
   display: flex;
+}
+
+nav {
+  height: 4.4rem;
   justify-content: center;
   padding-inline: var(--margin-default);
   border-block: 1px solid #f5f6f7;
 }
 
-a {
+nav a {
+  font-size: 2rem;
   font-weight: var(--font-bold);
   text-decoration: none;
 }
 
 .menu-desktop,
 .menu-mobile {
-  width: 100%;
   max-width: 1280px;
   padding-inline: var(--margin-default);
   list-style-type: none;
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.menu-mobile {
-  display: none;
-}
-
 main {
-  width: 100%;
   max-width: 1280px;
   margin: calc(var(--height-header) + var(--margin-default))
     var(--margin-default) var(--margin-default);
-  display: flex;
-  flex-wrap: wrap;
   gap: 0.8rem;
 }
 
 .main-news,
 .sport-news,
 .globo-news {
-  display: flex;
+  font-size: 2rem;
   padding: var(--margin-default);
   background-color: #efefef;
 }
 
 .main-news {
-  min-width: 61rem;
-  flex-grow: 2;
+  flex: 2 0 62.4rem;
 }
 
 .sport-news,
 .globo-news {
-  min-width: 31rem;
-  flex-grow: 1;
+  flex: 1 0 31.2rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1279px) {
+  .main-news {
+    flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .logo-mobile,
   .menu-mobile {
     display: flex;
@@ -120,8 +131,8 @@ main {
     display: none;
   }
 
-  .main-news {
-    min-width: none;
-    width: 100%;
+  .sport-news,
+  .globo-news {
+    flex-basis: 100%;
   }
 }
