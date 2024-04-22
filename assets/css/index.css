@@ -75,10 +75,13 @@ nav {
   border-block: 1px solid #f5f6f7;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav a {
   font-size: 2rem;
   font-weight: var(--font-bold);
-  text-decoration: none;
 }
 
 .menu-desktop,
@@ -94,7 +97,7 @@ main {
   max-width: 1280px;
   margin: calc(var(--height-header) + var(--margin-default))
     var(--margin-default) var(--margin-default);
-  gap: 0.8rem;
+  gap: var(--margin-default);
 }
 
 .main-news,
@@ -102,16 +105,41 @@ main {
 .globo-news {
   font-size: 2rem;
   padding: var(--margin-default);
-  background-color: #efefef;
 }
 
 .main-news {
+  flex-direction: column;
+  gap: 2.4rem;
   flex: 2 0 62.4rem;
+}
+
+h2:hover {
+  text-decoration: underline;
+}
+
+.headline h2 {
+  font-size: min(8vw, 5.2rem);
+  font-weight: var(--font-bold);
+  line-height: 1.6;
+  color: #c4160c;
+  margin-bottom: 1.6rem;
+}
+
+.highlight h2 {
+  font-size: 1.6rem;
+  font-weight: var(--font-semibold);
+  color: #303134;
+}
+
+hr {
+  border-width: 1px 0 0 0;
+  border-color: #f5f6f740;
 }
 
 .sport-news,
 .globo-news {
   flex: 1 0 31.2rem;
+  background-color: #efefef;
 }
 
 @media only screen and (max-width: 1279px) {
@@ -127,8 +155,18 @@ main {
   }
 
   .logo-desktop,
-  .menu-desktop {
+  .menu-desktop,
+  .display-desktop {
     display: none;
+  }
+
+  .main-news {
+    gap: 1.6rem
+  }
+
+  .highlight h2 {
+    font-weight: var(--font-bold);
+    color: #CD150B;
   }
 
   .sport-news,
