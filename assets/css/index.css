@@ -153,7 +153,18 @@ main img {
 .news-subject {
   margin-top: var(--margin-default);
   font-weight: var(--semibold);
+}
+
+.top-news .news-subject {
   color: #c4170c;
+}
+
+.sport-news .news-subject {
+  color: #16AE54;
+}
+
+.globo-news .news-subject {
+  color: #EC8006;
 }
 
 .news-title {
@@ -171,6 +182,16 @@ main img {
 .sport-news,
 .globo-news {
   flex: 1 0 30.8rem;
+  flex-direction: column;
+  gap: calc(3 * var(--margin-default));
+  padding-inline: calc(6 * var(--margin-default));
+}
+
+.sport-news {
+  border-inline: 1px solid #ebedef;
+}
+
+.globo-news {
   background-color: #efefef;
 }
 
@@ -212,20 +233,24 @@ footer {
     flex-direction: column;
   }
 
-  .top-news article {
+  .news {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: calc(2 * var(--margin-default));
   }
 
-  .top-news img,
-  .top-news .news-title {
+  .news img,
+  .news .news-title {
     flex: 1 0 33%;
   }
 
   .top-news h2 {
     color: #cd150b;
+  }
+
+  .sport-news h2 {
+    color: #06aa48;
   }
 
   .top-news .news-subtitle {
@@ -236,5 +261,10 @@ footer {
   .sport-news,
   .globo-news {
     flex-basis: 100%;
+    padding: 0;
+  }
+
+  .sport-news {
+    border: none;
   }
 }
