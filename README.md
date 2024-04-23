@@ -4,7 +4,7 @@
 
 ### [Clique para acessar a demonstração](https://carneiromatheus.github.io/projeto1-globo.com/)
 
-<a href="https://github.com/carneiromatheus/projeto1-globo.com/" target="_blank" rel="noopener noreferrer">
+<a href="https://carneiromatheus.github.io/projeto1-globo.com/" target="_blank" rel="noopener noreferrer">
   <img src="https://i.imgur.com/dsJgwo1.gif" alt="Imagem da notícia" width="100%"/>
 </a>
 
